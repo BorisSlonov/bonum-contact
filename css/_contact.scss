@@ -42,19 +42,23 @@
         margin-left: 5px;
     }
 }
+
 @media (max-width: 500px) {
     .contact-container {
         &__row {
             flex-wrap: wrap;
             align-items: space-between;
         }
+
         &__item {
             flex-direction: column;
             align-items: flex-start;
         }
+
         &__contact-icon:not(:first-child) {
             margin-left: 0px;
         }
+
         .contact-label {
             margin: 0;
             font-size: 1.2rem;
@@ -105,7 +109,7 @@
         :-ms-input-placeholder {
             font-size: 1rem;
         }
-        
+
         input:focus {
             border: 1px solid $sec-color;
         }
@@ -124,6 +128,25 @@
         border-radius: 20px;
         border: 1px solid #ccc;
         outline: none;
+
+    }
+
+    ::-webkit-textarea-placeholder {
+        font-size: 1rem;
+    }
+
+    ::-moz-placeholder {
+        font-size: 1rem;
+    }
+
+    /* Firefox 19+ */
+    :-moz-placeholder {
+        font-size: 1rem;
+    }
+
+    /* Firefox 18- */
+    :-ms-textarea-placeholder {
+        font-size: 1rem;
     }
 
     &__textarea:focus {

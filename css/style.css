@@ -152,7 +152,7 @@ ul {
 html,
 body {
   height: 100%;
-  font-family: Gilroy, serif;
+  font-family: Gilroy, sans-serif;
   font-weight: 300;
   font-size: calc(.5em + .5vw);
 }
@@ -806,6 +806,8 @@ a[class*=bg-]:hover .card-label::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  /* Firefox 19+ */
+  /* Firefox 18- */
 }
 
 .contact-container-form__input {
@@ -863,6 +865,22 @@ a[class*=bg-]:hover .card-label::after {
   border-radius: 20px;
   border: 1px solid #ccc;
   outline: none;
+}
+
+.contact-container-form ::-webkit-textarea-placeholder {
+  font-size: 1rem;
+}
+
+.contact-container-form ::-moz-placeholder {
+  font-size: 1rem;
+}
+
+.contact-container-form :-moz-placeholder {
+  font-size: 1rem;
+}
+
+.contact-container-form :-ms-textarea-placeholder {
+  font-size: 1rem;
 }
 
 .contact-container-form__textarea:focus {
