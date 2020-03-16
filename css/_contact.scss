@@ -102,7 +102,11 @@
         }
 
         /* Firefox 18- */
-        :-ms-input-placeholder input:focus {
+        :-ms-input-placeholder {
+            font-size: 1rem;
+        }
+        
+        input:focus {
             border: 1px solid $sec-color;
         }
 
