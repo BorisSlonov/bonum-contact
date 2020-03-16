@@ -1,0 +1,143 @@
+.contact-container {
+    &__row {
+        display: flex;
+        margin-top: 15px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item:not(:first-child) {
+        margin-left: 25px;
+    }
+
+    .contact-label {
+        margin-left: 10px;
+        color: $main-text;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    &__contact-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        color: $main-text;
+        font-size: 1.4rem;
+        border: 1px solid #cccdcd;
+        transition: all .3s;
+
+        &:hover {
+            border: 1px solid $sec-color;
+            background-color: $sec-color;
+            color: #fff;
+        }
+    }
+
+    &__contact-icon:not(:first-child) {
+        margin-left: 5px;
+    }
+}
+@media (max-width: 500px) {
+    .contact-container {
+        &__row {
+            flex-wrap: wrap;
+            align-items: space-between;
+        }
+        &__item {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__contact-icon:not(:first-child) {
+            margin-left: 0px;
+        }
+        .contact-label {
+            margin: 0;
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+    }
+}
+
+
+.container-contact-form {
+    margin-top: 80px;
+}
+
+.contact-container-form {
+    display: flex;
+    flex-direction: column;
+
+
+    &__input {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+
+        input {
+            width: 100%;
+            padding-top: 1em;
+            padding-bottom: 1em;
+            padding-left: 25px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        ::-webkit-input-placeholder {
+            font-size: 1rem;
+        }
+
+        ::-moz-placeholder {
+            font-size: 1rem;
+        }
+
+        /* Firefox 19+ */
+        :-moz-placeholder {
+            font-size: 1rem;
+        }
+
+        /* Firefox 18- */
+        :-ms-input-placeholder input:focus {
+            border: 1px solid $sec-color;
+        }
+
+        input:nth-child(2) {
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+    }
+
+    &__textarea {
+        resize: none;
+        padding-top: 2em;
+        padding-bottom: 4em;
+        padding-left: 25px;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+        outline: none;
+    }
+
+    &__textarea:focus {
+        border: 1px solid $sec-color;
+    }
+}
+
+@media (max-width:425px) {
+    .contact-container-form {
+        &__input {
+            flex-direction: column;
+
+            input:nth-child(2) {
+                margin-left: 0px;
+                margin-right: 0px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
